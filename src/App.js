@@ -2,14 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import Particles from 'react-particles-js';
 import LandingPage from "./LandingPage.js"
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
 
+  },
+  
+}));
 
 function App() {
-  let particleColor = "#118AB2"
+  const classes = useStyles;
+  let particleColor = "#118AB2";
+
   return (
     <div className="App">
-      <Particles
+      {/* <Particles
         params={{
           "particles": {
             "number": {
@@ -27,10 +35,17 @@ function App() {
               } 
             }
           }
-        }} />
+        }}>
+            
+          </Particles> */}
+
+          <LandingPage></LandingPage>
+
     </div>
 
   );
 }
 
 export default App;
+
+
