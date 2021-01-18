@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Particles from 'react-particles-js';
 import LandingPage from "./LandingPage.js"
@@ -8,8 +7,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
 
   },
-  
-}));
+
+}));  
 
 function App() {
   const classes = useStyles;
@@ -17,7 +16,18 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Particles
+
+      <LandingPage></LandingPage>
+
+    </div>
+
+  );
+}
+
+export default App;
+
+
+{/* <Particles
         params={{
           "particles": {
             "number": {
@@ -38,14 +48,3 @@ function App() {
         }}>
             
           </Particles> */}
-
-          <LandingPage></LandingPage>
-
-    </div>
-
-  );
-}
-
-export default App;
-
-
