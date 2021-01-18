@@ -8,6 +8,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: "1",
         padding: theme.spacing(3),
+        width: "100vw",
+        margin: "0"
     },
     appBar: {
         borderRadius: "15px",
@@ -25,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     main: {
-        height: "300px",
+        height: "auto",
         borderRadius: "15px",
         boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)"
 
@@ -59,12 +61,15 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+const items = {
+    height: "100px"
+}
 export default function LandingPage() {
     const classes = useStyles();
 
     return (
         <Grid container className={classes.root} spacing={3}>
-            <Grid item xs={12}>
+            <Grid item xs={12} style={items}>
                 <Paper className={classes.appBar}>
                     <Typography className={classes.title}>Site Name</Typography>
                 </Paper>
@@ -78,9 +83,7 @@ export default function LandingPage() {
 
                     </div>
                     <div className={classes.content}>
-                        <Button variant="contained" color="primary">
-                            Primary
-                        </Button>
+                        <Typography variant="body1">sed dignissim diam vehicula malesuada. Nulla sit amet rhoncus arcu. Mauris at purus ante. Aliquam semper venenatis vestibulum. Nullam volutpat sed libero non egestas. Ut fringilla eget magna sit amet posuere. Quisque blandit ante vitae tortor condimentum sollicitudin. Nunc pellentesque velit ac nisl sodales viverra. Mauris enim lorem, efficitur non dolor ac, rutrum ultrices dui. Donec non volutpat est. Pellentesque laoreet quis nisl non dapibus. Vivamus aliquet, turpis eu euismod consectetur, sapien justo tempus lorem, sed dignissim neque magna quis sapien.</Typography>
                     </div>
 
                 </Paper>
