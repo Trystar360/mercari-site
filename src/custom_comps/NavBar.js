@@ -5,7 +5,7 @@ import { Paper } from "@material-ui/core/";
 const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
-        height: theme.spacing(12),
+        height: "auto",
         position: "absolute",
         top: "0"
     },
@@ -21,8 +21,13 @@ const useStyles = makeStyles((theme) => ({
     },
     navContent: {
         width: "%100",
-        height: "inherit",
+        height: "112",
         padding: "0 10vw 0 10vw"
+    },
+    logo: {
+        width: "96px",
+        height: "96px",
+        padding: theme.spacing(1),
     }
 }));
 
@@ -33,7 +38,7 @@ export default function NavBar() {
         <div className={classes.root}>
             <Paper className={classes.navBarPaper}>
                 <div className={classes.navContent}>
-                    <img width="96" height="96" style={{}} src="https://www.mercariconsultants.com/wp-content/uploads/2019/07/MPA_White.png" alt="Mercari"></img>
+                    <img className={classes.logo} src="https://www.mercariconsultants.com/wp-content/uploads/2019/07/MPA_White.png" alt="Mercari"></img>
                     </div>
                 </Paper>   
 

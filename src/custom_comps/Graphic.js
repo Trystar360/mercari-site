@@ -42,7 +42,7 @@ export default function Graphic(color) {
                                 "value": 1,
                                 "density": {
                                     "enable": true,
-                                    "value_area": 3.5
+                                    "value_area": 5
                                 }
                             },
                             "size": {
