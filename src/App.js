@@ -1,6 +1,6 @@
 import './App.css';
-import Particles from 'react-particles-js';
 import LandingPage from "./LandingPage.js"
+import Graphic from "./custom_comps/Graphic.js"
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -8,17 +8,15 @@ const useStyles = makeStyles((theme) => ({
 
   },
 
-}));  
+}));
 
 function App() {
   const classes = useStyles;
-  let particleColor = "#118AB2";
+  
 
   return (
     <div className="App">
-
-      <LandingPage></LandingPage>
-
+      <Graphic></Graphic>
     </div>
 
   );
@@ -27,24 +25,3 @@ function App() {
 export default App;
 
 
-{/* <Particles
-        params={{
-          "particles": {
-            "number": {
-              "value": 100
-            },
-            "size": {
-              "value": 3
-            },
-            "color": {
-              "value": particleColor
-            }, 
-            line_linked: {
-              "color": {
-                "value": particleColor
-              } 
-            }
-          }
-        }}>
-            
-          </Particles> */}

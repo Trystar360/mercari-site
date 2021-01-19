@@ -1,7 +1,7 @@
 import { createMuiTheme }  from '@material-ui/core/styles'
 const theme = createMuiTheme({
   typography: {
-    fontFamily: '"Roboto Mono","Roboto", "Helvetica", "Arial", sans-serif'
+    fontFamily: '"Bai Jamjuree","Roboto Mono","Roboto", "Helvetica", "Arial", sans-serif'
   },
   palette: {
     background: {
