@@ -1,11 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Particles from 'react-particles-js';
-import Theme from '../theme.js'
+import theme from '../theme.js'
+import clsx from 'clsx'
 
 
 const useStyles = makeStyles((theme) => ({
     graphicRoot: {
+        backgroundImage: "url(https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        //backgroundPosition: "50% 50%"
+
+    },
+    graphicHeight: {
         [theme.breakpoints.between("xs", "sm")]: {
             height: "550px"
         },
@@ -15,12 +23,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.between("md", "lg")]: {
             height: "730px",
         },
-        backgroundImage: "url(https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        zIndex: theme.zIndex.appBar - 3,
-        backgroundPosition: "50% 50%"
-
     }
 }));
 
@@ -29,36 +31,12 @@ export default function Graphic(color) {
     let particleColor = "#f2f2f2"
 
     return (
-        <div className={classes.graphicRoot}>
-            <div style={{ width: "inherit", height: "inherit", backgroundColor: "hsla(0, 0%, 0%, .5)" }}>
+        <div className={clsx(classes.graphicRoot, classes.graphicHeight)}>
+            <div className={classes.graphicHeight} style={{ width: "inherit", height: "inherit", backgroundColor: "hsla(0, 0%, 0%, .45)" }}>
                 <Particles
-                style={{height: "inherit", width: "inherits"}}
-                    params={{
-                        "particles": {
-                            "opacity": {
-                                "value": .3
-                            },
-                            "number": {
-                                "value": 1,
-                                "density": {
-                                    "enable": true,
-                                    "value_area": 5
-                                }
-                            },
-                            "size": {
-                                "value": 3
-                            },
-                            "color": {
-                                "value": particleColor
-                            },
-                            "line_linked": {
-                                "color": particleColor,
-                                "opacity": .3
-
-                            }
-                        }
-                    }}>
-
+                    className={classes.graphicHeight}
+                    style={{ height: "inherit", width: "inherit" }}
+                    params={theme.particles.variant1}>
                 </Particles>
             </div>
         </div>

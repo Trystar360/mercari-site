@@ -11,22 +11,21 @@ const useStyles = makeStyles((theme) => ({
     },
     navBarPaper: {
         height: "inherit",
-        width: "100%",
+        width: `calc(100% - ${theme.spacing(8)})`,
         top: "-5px",
-        backgroundColor: "hsla(0, 0%, 0%, .65)",
+        backgroundColor: "hsla(0, 0%, 0%, .45)",
         //borderRadius: "0 0 10vw 10vw",
-        borderRadius: "0",
-        boxShadow: "none",
-        borderColor: "white",
-        borderWidth: "1px"
+        borderRadius: "0 0 3vw 3vw",
+        marginLeft: theme.spacing(4),
+        marginRight: theme.spacing(4)
     },
     navContent: {
         width: "%100",
         height: "auto",
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
-        paddingLeft: theme.spacing(4),
-        paddingRight: theme.spacing(4)
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+        paddingLeft: theme.spacing(3),
+        paddingRight: theme.spacing(3)
     },
     logo: {
         display: "block",
