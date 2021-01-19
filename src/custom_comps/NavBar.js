@@ -14,20 +14,36 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         top: "-5px",
         backgroundColor: "hsla(0, 0%, 0%, .65)",
-        borderRadius: "0 0 10vw 10vw",
+        //borderRadius: "0 0 10vw 10vw",
+        borderRadius: "0",
         boxShadow: "none",
         borderColor: "white",
         borderWidth: "1px"
     },
     navContent: {
         width: "%100",
-        height: "112",
-        padding: "0 10vw 0 10vw"
+        height: "auto",
+        paddingTop: theme.spacing(4),
+        paddingBottom: theme.spacing(4),
+        paddingLeft: theme.spacing(4),
+        paddingRight: theme.spacing(4)
     },
     logo: {
+        display: "block",
         width: "96px",
-        height: "96px",
-        padding: theme.spacing(1),
+        height: "auto",
+        [theme.breakpoints.between("xs", "sm")]: {
+            height: "65px",
+            width: "auto"
+        },
+        [theme.breakpoints.between('sm', "md")]: {
+            height: "75px",
+            width: "auto"
+        },
+        [theme.breakpoints.between("md", "lg")]: {
+            height: "85px",
+            width: "auto"
+        },
     }
 }));
 
